@@ -9,26 +9,29 @@
           <span class="text__normal info">Obecnie strona znajduje się w przebudowie. Bądź cierpliwy. </span>
         </v-layout>
         <v-layout row justify-center>
-          <span class="text__normal info">Subskrybuj nas na portalach społecznościowych</span>
+          <span class="text__normal info">Póki co zajrzyj do nas na portalach społecznościowych</span>
         </v-layout>
-        <v-layout row justify-center>
-          <a class="socialLogo" target="_blank" :href="`https://www.facebook.com/${gentleFbPath}/`">
-            <img alt="facebook" :style="{borderRadius: 32 + 'px'}" :src="facebookLogo">
-            <span class="text__normal"> @{{gentleFbPath}} </span>
-          </a>
-        </v-layout>
-        <v-layout row justify-center>
-          <a class="socialLogo" target="_blank" :href="`https://www.instagram.com/${gentleInstPath}/`">
-            <img alt="facebook" :src="instagramLogo">
-            <span class="text__normal"> @{{gentleInstPath}} </span>
-          </a>
+        <v-layout row justify-space-around>
+          <icon-with-desc
+                  :link="`https://www.facebook.com/${gentleFbPath}/`"
+                  :image="facebookLogo"
+                  :description="`@${gentleFbPath}`">
+          </icon-with-desc>
+          <icon-with-desc
+                  :link="`https://www.instagram.com/${gentleInstPath}/`"
+                  :image="instagramLogo"
+                  :description="`@${gentleInstPath}`">
+          </icon-with-desc>
         </v-layout>
       </v-flex>
     </v-container>
+    <strong-points-container></strong-points-container>
   </div>
 </template>
 
 <script>
+import StrongPointsContainer from "./StrongPointsContainer";
+import IconWithDesc from "./ImageLinkWithDescription";
 import facebook from "../assets/facebook.png";
 import instagram from "../assets/instagram.png";
 
@@ -37,6 +40,7 @@ export default {
   props: {
     msg: String
   },
+  components: { IconWithDesc, StrongPointsContainer },
   data () {
     return {
       gentleFbPath: "geexp",
@@ -50,16 +54,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.socialLogo {
-  color: #42b983;
-  width: 152px;
-  height: 152px;
-  margin: 24px 0;
-}
-.socialLogo img {
-  width: inherit;
-  height: inherit;
-}
 .header {
   font-size: 24px;
   padding: 32px 0;

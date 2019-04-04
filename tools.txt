@@ -1,0 +1,2 @@
+scp -r -P 59184 dist/* gentlexp@gentleexpeditions.com:/home/gentlexp/tmp
+ssh gentlexp@gentleexpeditions.com -p 59184
