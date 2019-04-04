@@ -75,7 +75,7 @@
         }
         .theme--light.v-divider {
             border: 1px solid;
-            border-color: #5d5b5b;
+            border-color: grey;
         }
     }
 </style>

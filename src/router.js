@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import IconWithDesc from './components/IconWithDesc';
+import StrongPoints from './components/StrongPointsContainer';
 import WelcomeScreen from './components/WelcomeScreen.vue'
 
 Vue.use(VueRouter);
@@ -11,12 +11,12 @@ export default new VueRouter({
         {
             path: '/',
             name: 'WelcomeScreen',
-            component: WelcomeScreen
+            component: WelcomeScreen,
         },
         {
-            path: '/asd',
-            name: 'icon',
-            component: IconWithDesc
+            path: '/home',
+            name: 'Home',
+            component: StrongPoints
         },
         {
             path: '/*',

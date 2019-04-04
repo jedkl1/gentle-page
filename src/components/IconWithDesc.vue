@@ -32,10 +32,10 @@
         display: flex;
         padding: 16px;
         .material-icons {
+            padding: 16px;
             &.md-64 {
                 font-size: 64px;
             }
-            padding: 16px;
         }
         span {
             text-align: center;

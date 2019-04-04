@@ -9,7 +9,7 @@
           <span class="text__normal info">Obecnie strona znajduje się w przebudowie. Bądź cierpliwy. </span>
         </v-layout>
         <v-layout row justify-center>
-          <span class="text__normal info">Póki co zajrzyj do nas na portalach społecznościowych</span>
+          <span class="text__normal info">Póki co szukaj nas na portalach społecznościowych :)</span>
         </v-layout>
         <v-layout row justify-space-around>
           <icon-with-desc
@@ -25,7 +25,6 @@
         </v-layout>
       </v-flex>
     </v-container>
-    <strong-points-container></strong-points-container>
   </div>
 </template>
 
