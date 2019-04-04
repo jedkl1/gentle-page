@@ -1,17 +1,12 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Witamy na stronie Gentle Expeditions"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/WelcomeScreen.vue'
-
 export default {
   name: 'app',
-  components: {
-    HelloWorld
-  }
 }
 </script>
 

@@ -36,7 +36,7 @@ import facebook from "../assets/facebook.png";
 import instagram from "../assets/instagram.png";
 
 export default {
-  name: 'HelloWorld',
+  name: 'WelcomeScreen',
   props: {
     msg: String
   },
