@@ -6,10 +6,10 @@
       </router-link>
     </div>
     <v-layout row wrap>
-      <v-flex xs12 sm3 md2>
+      <v-flex xs12 sm4 md2>
         <nav-bar></nav-bar>
       </v-flex>
-      <v-flex xs12 sm9 md10>
+      <v-flex xs12 sm8 md10>
         <div class="content" id="scroll_content">
           <router-view></router-view>
         </div>

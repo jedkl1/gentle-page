@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import IconWithDesc from "./ImageLinkWithDescription";
+import IconWithDesc from "./Avatars/ImageLinkWithDescription";
 import facebook from "../assets/facebook.png";
 import instagram from "../assets/instagram.png";
 

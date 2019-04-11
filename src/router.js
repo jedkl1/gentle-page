@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import StrongPoints from "./components/StrongPointsContainer";
 import WelcomeScreen from "./components/WelcomeScreen.vue";
+import MainPage from "./views/MainPage.vue";
 
 Vue.use(VueRouter);
 
@@ -15,7 +15,7 @@ export default new VueRouter({
     {
       path: "/home",
       name: "Home",
-      component: StrongPoints
+      component: MainPage
     },
     {
       path: "/*",
