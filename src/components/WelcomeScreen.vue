@@ -6,21 +6,27 @@
           <span class="header">{{ msg }}</span>
         </v-layout>
         <v-layout row justify-center>
-          <span class="text__normal info">Obecnie strona znajduje się w przebudowie. Bądź cierpliwy. </span>
+          <span class="text__normal info"
+            >Obecnie strona znajduje się w przebudowie. Bądź cierpliwy.
+          </span>
         </v-layout>
         <v-layout row justify-center>
-          <span class="text__normal info">Póki co szukaj nas na portalach społecznościowych :)</span>
+          <span class="text__normal info"
+            >Póki co szukaj nas na portalach społecznościowych :)</span
+          >
         </v-layout>
         <v-layout row justify-space-around>
           <icon-with-desc
-                  :link="`https://www.facebook.com/${gentleFbPath}/`"
-                  :image="facebookLogo"
-                  :description="`@${gentleFbPath}`">
+            :link="`https://www.facebook.com/${gentleFbPath}/`"
+            :image="facebookLogo"
+            :description="`@${gentleFbPath}`"
+          >
           </icon-with-desc>
           <icon-with-desc
-                  :link="`https://www.instagram.com/${gentleInstPath}/`"
-                  :image="instagramLogo"
-                  :description="`@${gentleInstPath}`">
+            :link="`https://www.instagram.com/${gentleInstPath}/`"
+            :image="instagramLogo"
+            :description="`@${gentleInstPath}`"
+          >
           </icon-with-desc>
         </v-layout>
       </v-flex>
@@ -29,26 +35,25 @@
 </template>
 
 <script>
-import StrongPointsContainer from "./StrongPointsContainer";
 import IconWithDesc from "./ImageLinkWithDescription";
 import facebook from "../assets/facebook.png";
 import instagram from "../assets/instagram.png";
 
 export default {
-  name: 'WelcomeScreen',
+  name: "WelcomeScreen",
   props: {
     msg: String
   },
-  components: { IconWithDesc, StrongPointsContainer },
-  data () {
+  components: { IconWithDesc },
+  data() {
     return {
       gentleFbPath: "geexp",
       gentleInstPath: "gentleexpeditions",
       facebookLogo: facebook,
       instagramLogo: instagram
-    }
+    };
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
