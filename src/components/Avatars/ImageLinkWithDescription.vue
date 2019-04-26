@@ -2,7 +2,7 @@
   <v-flex class="strongPoint" xs12 sm6 md6>
     <a class="socialLogo" target="_blank" :href="link">
       <img alt="link" :src="image" />
-      <span class="text__normal"> {{ description }} </span>
+      <span class="text__normal16"> {{ description }} </span>
     </a>
   </v-flex>
 </template>

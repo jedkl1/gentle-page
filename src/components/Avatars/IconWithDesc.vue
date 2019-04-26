@@ -1,7 +1,7 @@
 <template>
   <v-flex class="strongPoint" xs6 sm4 md4>
     <i class="material-icons md-64">{{ image }}</i>
-    <span class="text__normal"> {{ description }} </span>
+    <span class="text__normal16"> {{ description }} </span>
   </v-flex>
 </template>
 

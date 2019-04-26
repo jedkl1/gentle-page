@@ -1,17 +1,22 @@
 <template>
-  <v-flex class="strongPoint" xs6 sm4 md4>
+  <v-flex class="manWrapper" xs6 sm4 md4>
     <i class="material-icons md-64">{{ image }}</i>
-    <span class="text__normal"> {{ description }} </span>
+    <span class="text__bold20"> {{ name }}</span>
+    <span class="text__normal16"> {{ description }} </span>
   </v-flex>
 </template>
 
 <script>
 export default {
-  name: "IconWithDescription",
+  name: "RadiusImage",
   props: {
     image: {
       type: String,
-      default: ""
+      default: "home"
+    },
+    name: {
+      type: String,
+      default: "Krystian"
     },
     description: {
       type: String,
@@ -23,7 +28,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-.strongPoint {
+.manWrapper {
   color: grey;
   align-items: center;
   justify-content: center;
@@ -39,6 +44,12 @@ export default {
   span {
     text-align: center;
     max-width: 340px;
+  }
+  .text__bold20 {
+    padding-bottom: 8px;
+  }
+  .text__normal16 {
+    text-transform: uppercase;
   }
 }
 </style>

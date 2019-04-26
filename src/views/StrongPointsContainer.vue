@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import IconWithDescription from "./Avatars/IconWithDesc";
+import IconWithDescription from "../components/Avatars/IconWithDesc";
 export default {
   name: "StrongPointsContainer",
   components: { IconWithDescription },

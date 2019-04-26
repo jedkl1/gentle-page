@@ -6,12 +6,12 @@
           <span class="header">{{ msg }}</span>
         </v-layout>
         <v-layout row justify-center>
-          <span class="text__normal info"
+          <span class="text__normal16 info"
             >Obecnie strona znajduje się w przebudowie. Bądź cierpliwy.
           </span>
         </v-layout>
         <v-layout row justify-center>
-          <span class="text__normal info"
+          <span class="text__normal16 info"
             >Póki co szukaj nas na portalach społecznościowych :)</span
           >
         </v-layout>
@@ -62,8 +62,14 @@ export default {
   font-size: 24px;
   padding: 32px 0;
 }
-.text__normal {
+.text__normal16 {
   font-size: 16px;
+  font-weight: 400;
+}
+
+.text__bold20 {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .info {

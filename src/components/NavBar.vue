@@ -1,6 +1,6 @@
 <template>
   <v-card id="menu" height="100%">
-    <v-navigation-drawer v-model="drawer" permanent absolute>
+    <v-navigation-drawer v-model="drawer" permanent absolute width="320">
       <v-list dense>
         <v-list-tile v-for="item in items" :key="item.title" @click="">
           <v-list-tile-action>
