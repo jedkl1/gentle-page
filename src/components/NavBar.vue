@@ -6,10 +6,11 @@
           <v-list-tile-action>
             <v-icon large>{{ item.icon }}</v-icon>
           </v-list-tile-action>
-
-          <v-list-tile-content>
-            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-          </v-list-tile-content>
+          <router-link to="/home">
+            <v-list-tile-content>
+              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            </v-list-tile-content>
+          </router-link>
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
@@ -26,23 +27,28 @@ export default {
       items: [
         {
           title: "Home",
-          icon: "home"
+          icon: "home",
+          link: "/home"
         },
         {
           title: "Ekspedycje",
-          icon: "directions_bike"
+          icon: "directions_bike",
+          link: "/home"
         },
         {
           title: "Team",
-          icon: "group"
+          icon: "group",
+          link: "/home"
         },
         {
           title: "Jedź z nami",
-          icon: "group_add"
+          icon: "group_add",
+          link: "/home"
         },
         {
           title: "Kontakt",
-          icon: "phone"
+          icon: "phone",
+          link: "/home"
         }
       ]
     };
@@ -58,6 +64,10 @@ export default {
       height: 56px;
       font-size: 20px;
       transition: transform 1s;
+      a {
+        text-decoration: none;
+        color: #000;
+      }
       &:hover {
         transform: translateX(16px);
       }

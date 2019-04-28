@@ -1,13 +1,6 @@
 <template>
   <v-container class="strongPoints" fluid align-center align-content-center>
-    <v-layout row wrap justify-center>
-      <h2>Dlaczego warto się z nami wybrać</h2>
-    </v-layout>
-    <v-layout row wrap justify-center>
-      <v-flex xs6 sm4 md2>
-        <v-divider></v-divider>
-      </v-flex>
-    </v-layout>
+    <section-header text="Dlaczego warto się z nami wybrać"></section-header>
     <v-layout row wrap justify-center>
       <icon-with-description
         v-for="(item, index) in items"
@@ -21,9 +14,11 @@
 
 <script>
 import IconWithDescription from "../components/Avatars/IconWithDesc";
+import SectionHeader from "../components/SectionHeader";
+
 export default {
   name: "StrongPointsContainer",
-  components: { IconWithDescription },
+  components: { IconWithDescription, SectionHeader },
   data() {
     return {
       items: [
@@ -76,14 +71,4 @@ export default {
 </script>
 
 <style lang="scss">
-.strongPoints {
-  h2 {
-    text-align: center;
-    padding-bottom: 8px;
-  }
-  .theme--light.v-divider {
-    border: 1px solid;
-    border-color: grey;
-  }
-}
 </style>

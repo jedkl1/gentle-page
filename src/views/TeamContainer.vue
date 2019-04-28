@@ -1,13 +1,6 @@
 <template>
   <v-container class="strongPoints" fluid align-center align-content-center>
-    <v-layout row wrap justify-center>
-      <h2>OUR TEAM</h2>
-    </v-layout>
-    <v-layout row wrap justify-center>
-      <v-flex xs6 sm4 md2>
-        <v-divider></v-divider>
-      </v-flex>
-    </v-layout>
+    <section-header text="OUR TEAM"></section-header>
     <v-layout row wrap justify-center>
       <radius-image
         v-for="(item, index) in items"
@@ -22,9 +15,11 @@
 
 <script>
 import RadiusImage from "../components/Avatars/RadiusImage";
+import SectionHeader from "../components/SectionHeader";
+
 export default {
   name: "TeamContainer",
-  components: { RadiusImage },
+  components: { RadiusImage, SectionHeader },
   data() {
     return {
       items: [
