@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div class="top">
+      <img class="avatar" :src="logoSrc" />
       <router-link to="/home">
         Gentle Expeditions
       </router-link>
@@ -23,10 +24,16 @@
 
 <script>
 import NavBar from "./components/NavBar";
+import { uploadsUrl } from "./helpers/connectors";
 
 export default {
   name: "app",
-  components: { NavBar }
+  components: { NavBar },
+  data: () => {
+    return {
+      logoSrc: `${uploadsUrl}2019/02/cropped-cropped-G-150x150.png`
+    };
+  }
 };
 </script>
 
@@ -39,7 +46,7 @@ html {
   color: #2c3e50;
   .content {
     overflow: auto;
-    height: 93vh;
+    height: 92vh;
   }
   .footer,
   .top {
@@ -54,11 +61,17 @@ html {
     justify-content: center;
   }
   .top {
-    height: 4vh;
-    font-size: 18px;
+    height: 5vh;
+    font-size: 22px;
     a {
       color: #fff;
       text-decoration: none;
+    }
+    .avatar {
+      width: 48px;
+      height: 48px;
+      padding: 8px;
+      border-radius: 50%;
     }
   }
 

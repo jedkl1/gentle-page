@@ -1,5 +1,6 @@
 <template>
   <div>
+    <welcome-screen></welcome-screen>
     <strong-points></strong-points>
     <team-container></team-container>
   </div>
@@ -8,10 +9,11 @@
 <script>
 import StrongPoints from "./StrongPointsContainer";
 import TeamContainer from "./TeamContainer";
+import WelcomeScreen from "../components/WelcomeScreen";
 
 export default {
   name: "MainPage",
-  components: { StrongPoints, TeamContainer },
+  components: { StrongPoints, TeamContainer, WelcomeScreen },
   props: {}
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <v-flex class="manWrapper" xs6 sm4 md4>
-    <i class="material-icons md-64">{{ image }}</i>
+    <img class="avatar" :src="image" />
     <span class="text__bold20"> {{ name }}</span>
     <span class="text__normal16"> {{ description }} </span>
   </v-flex>
@@ -35,12 +35,12 @@ export default {
   flex-direction: column;
   display: flex;
   padding: 16px;
-  .material-icons {
-    padding: 16px;
-    &.md-64 {
-      font-size: 64px;
-    }
+
+  .avatar {
+    border-radius: 50%;
+    padding: 8px;
   }
+
   span {
     text-align: center;
     max-width: 340px;

@@ -6,7 +6,7 @@
           <v-list-tile-action>
             <v-icon large>{{ item.icon }}</v-icon>
           </v-list-tile-action>
-          <router-link to="/home">
+          <router-link :to="item.link">
             <v-list-tile-content>
               <v-list-tile-title>{{ item.title }}</v-list-tile-title>
             </v-list-tile-content>
@@ -38,7 +38,7 @@ export default {
         {
           title: "Team",
           icon: "group",
-          link: "/home"
+          link: "/home#team"
         },
         {
           title: "Jedź z nami",

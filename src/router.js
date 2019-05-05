@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import WelcomeScreen from "./components/WelcomeScreen.vue";
+//import WelcomeScreen from "./components/WelcomeScreen.vue";
 import MainPage from "./views/MainPage.vue";
 
 Vue.use(VueRouter);
@@ -10,7 +10,7 @@ export default new VueRouter({
     {
       path: "/",
       name: "WelcomeScreen",
-      component: WelcomeScreen
+      component: MainPage
     },
     {
       path: "/home",
@@ -20,7 +20,7 @@ export default new VueRouter({
     {
       path: "/*",
       name: "default",
-      component: WelcomeScreen
+      component: MainPage
     }
   ]
 });
