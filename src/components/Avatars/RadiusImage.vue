@@ -1,8 +1,8 @@
 <template>
-  <v-flex class="manWrapper" xs6 sm4 md4>
+  <v-flex class="manWrapper" xs12 sm6 md4>
     <img class="avatar" :src="image" />
-    <span class="text__bold20"> {{ name }}</span>
-    <span class="text__normal16"> {{ description }} </span>
+    <span class="text text__bold md-20"> {{ name }}</span>
+    <span class="text text__normal md-16"> {{ description }} </span>
   </v-flex>
 </template>
 
@@ -48,7 +48,7 @@ export default {
   .text__bold20 {
     padding-bottom: 8px;
   }
-  .text__normal16 {
+  .text__normal__16 {
     text-transform: uppercase;
   }
 }

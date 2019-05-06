@@ -1,6 +1,12 @@
 <template>
   <v-card id="menu" height="100%">
-    <v-navigation-drawer v-model="drawer" permanent absolute width="320">
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+      :height="phoneDrawer ? '560' : '100%'"
+      width="320px"
+    >
       <v-list dense>
         <v-list-tile v-for="item in items" :key="item.title" @click="">
           <v-list-tile-action>
@@ -18,12 +24,13 @@
 </template>
 
 <script>
+import { createNamespacedHelpers } from "vuex";
+const { mapGetters, mapMutations } = createNamespacedHelpers("general");
 export default {
   name: "NavBar",
   props: {},
   data() {
     return {
-      drawer: true,
       items: [
         {
           title: "Home",
@@ -36,9 +43,19 @@ export default {
           link: "/home"
         },
         {
+          title: "Galeria",
+          icon: "collections",
+          link: "/home"
+        },
+        {
           title: "Team",
           icon: "group",
           link: "/home#team"
+        },
+        {
+          title: "Kontakt",
+          icon: "phone",
+          link: "/home"
         },
         {
           title: "Jedź z nami",
@@ -46,12 +63,26 @@ export default {
           link: "/home"
         },
         {
-          title: "Kontakt",
-          icon: "phone",
+          title: "Zostaw ślad",
+          icon: "flag",
           link: "/home"
         }
       ]
     };
+  },
+  computed: {
+    ...mapGetters(["navDrawer", "phoneDrawer"]),
+    drawer: {
+      get() {
+        return this.navDrawer;
+      },
+      set(value) {
+        this.setDrawer(value);
+      }
+    }
+  },
+  methods: {
+    ...mapMutations(["setDrawer"])
   }
 };
 </script>

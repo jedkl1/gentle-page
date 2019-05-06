@@ -1,7 +1,7 @@
 <template>
-  <v-flex class="strongPoint" xs6 sm4 md4>
+  <v-flex class="strongPoint" xs12 sm6 md4>
     <i class="material-icons md-64">{{ image }}</i>
-    <span class="text__normal16"> {{ description }} </span>
+    <span class="text text__normal md-16"> {{ description }} </span>
   </v-flex>
 </template>
 
@@ -30,11 +30,8 @@ export default {
   flex-direction: column;
   display: flex;
   padding: 16px;
-  .material-icons {
+  i {
     padding: 16px;
-    &.md-64 {
-      font-size: 64px;
-    }
   }
   span {
     text-align: center;

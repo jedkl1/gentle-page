@@ -1,6 +1,6 @@
 <template>
   <v-container class="strongPoints" fluid align-center align-content-center>
-    <section-header id="team" text="OUR TEAM"></section-header>
+    <section-header id="team" text="NASZ TEAM"></section-header>
     <v-layout row wrap justify-center>
       <radius-image
         v-for="(item, index) in items"
@@ -28,7 +28,7 @@ export default {
         {
           image: `${uploadsUrl}2019/02/konrad-150x150.png`,
           name: "Konrad",
-          descr: "founder, manager, fb, editor, public relations, traveler"
+          descr: "founder, manager, facebook, editor, traveler"
         },
         {
           image: `${uploadsUrl}2016/05/piotr-150x150.png`,
@@ -48,7 +48,7 @@ export default {
         {
           image: `${uploadsUrl}2016/05/Bez-nazwy-2-150x150.png`,
           name: "Wojciech",
-          descr: "founder, cost optimization, traveler"
+          descr: "founder, cost optimization, instagram, traveler"
         },
         {
           image: `${uploadsUrl}2019/05/jedrzej-2-150x150.png`,

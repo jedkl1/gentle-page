@@ -6,12 +6,12 @@
           <span class="header">{{ msg }}</span>
         </v-layout>
         <v-layout row justify-center>
-          <span class="text__normal16 info"
+          <span class="text text__normal md-20 info"
             >Obecnie strona znajduje się w przebudowie. Bądź cierpliwy.
           </span>
         </v-layout>
         <v-layout row justify-center>
-          <span class="text__normal16 info"
+          <span class="text text__normal md-20 info"
             >Póki co szukaj nas na portalach społecznościowych :)</span
           >
         </v-layout>
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import IconWithDesc from "./Avatars/ImageLinkWithDescription";
+import IconWithDesc from "../components/Avatars/ImageLinkWithDescription";
 import facebook from "../assets/facebook.png";
 import instagram from "../assets/instagram.png";
 
@@ -61,15 +61,6 @@ export default {
 .header {
   font-size: 24px;
   padding: 32px 0;
-}
-.text__normal16 {
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.text__bold20 {
-  font-size: 20px;
-  font-weight: 600;
 }
 
 .info {

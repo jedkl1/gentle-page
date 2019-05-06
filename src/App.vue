@@ -1,18 +1,16 @@
 <template>
   <div id="app">
-    <div class="top">
-      <img class="avatar" :src="logoSrc" />
-      <router-link to="/home">
-        Gentle Expeditions
-      </router-link>
-    </div>
+    <top-bar></top-bar>
+    <nav-bar v-if="phoneDrawer"></nav-bar>
     <v-layout row wrap>
-      <v-flex xs12 sm4 md2>
+      <v-flex v-if="!phoneDrawer" xs12 sm4 md2>
         <nav-bar></nav-bar>
       </v-flex>
       <v-flex xs12 sm8 md10>
         <div class="content" id="scroll_content">
-          <router-view></router-view>
+          <transition>
+            <router-view></router-view>
+          </transition>
         </div>
       </v-flex>
     </v-layout>
@@ -24,20 +22,43 @@
 
 <script>
 import NavBar from "./components/NavBar";
-import { uploadsUrl } from "./helpers/connectors";
+import TopBar from "./components/TopBar";
+import { createNamespacedHelpers } from "vuex";
+const { mapGetters, mapMutations } = createNamespacedHelpers("general");
 
 export default {
   name: "app",
-  components: { NavBar },
+  components: { NavBar, TopBar },
+  created() {
+    window.addEventListener("resize", this.handleResize);
+    this.handleResize();
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.handleResize);
+  },
   data: () => {
-    return {
-      logoSrc: `${uploadsUrl}2019/02/cropped-cropped-G-150x150.png`
-    };
+    return {};
+  },
+  computed: {
+    ...mapGetters(["phoneDrawer", "navDrawer"])
+  },
+  methods: {
+    ...mapMutations(["setPhoneDrawer", "setDrawer"]),
+    handleResize() {
+      if (screen.width <= 600) {
+        this.setPhoneDrawer(true);
+        this.setDrawer(false);
+      } else {
+        this.setPhoneDrawer(false);
+        this.setDrawer(true);
+      }
+    }
   }
 };
 </script>
 
 <style lang="scss">
+@import "./styles/main.scss";
 html {
   overflow-y: hidden !important;
 }
@@ -46,7 +67,7 @@ html {
   color: #2c3e50;
   .content {
     overflow: auto;
-    height: 92vh;
+    height: calc(100vh - 5.75em);
   }
   .footer,
   .top {
@@ -56,25 +77,10 @@ html {
     background-color: #000;
   }
   .footer {
-    height: 3vh;
-    font-size: 16px;
+    height: 2em;
+    font-size: 1em;
     justify-content: center;
   }
-  .top {
-    height: 5vh;
-    font-size: 22px;
-    a {
-      color: #fff;
-      text-decoration: none;
-    }
-    .avatar {
-      width: 48px;
-      height: 48px;
-      padding: 8px;
-      border-radius: 50%;
-    }
-  }
-
   .page-enter-active,
   .page-leave-active {
     transition: opacity 1s, transform 1s;

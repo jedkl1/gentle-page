@@ -1,0 +1,44 @@
+html {
+  font-size: 16px !important;
+}
+.text {
+  &__normal {
+    font-weight: 400;
+  }
+  &__bold {
+    font-weight: 600;
+  }
+  &.md-16 {
+    font-size: 1em;
+  }
+  &.md-20 {
+    font-size: 1.25em;
+  }
+  &.md-24 {
+    font-size: 1.5em;
+  }
+  &.md-32 {
+    font-size: 2em;
+  }
+  &.md-48 {
+    font-size: 3em;
+  }
+}
+
+.material-icons {
+  &.md-20 {
+    font-size: 1.25em;
+  }
+  &.md-24 {
+    font-size: 1.5em;
+  }
+  &.md-32 {
+    font-size: 2em;
+  }
+  &.md-48 {
+    font-size: 3em;
+  }
+  &.md-64 {
+    font-size: 4em;
+  }
+}
